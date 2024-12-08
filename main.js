@@ -26,10 +26,10 @@ const segments = 64;
 const orbitRadius = 3;
 const spheres = new THREE.Group();
 const textures = [
-    'https://ik.imagekit.io/yashyadav/planets/earthmap1k.jpg?updatedAt=1733679161443',
-    './earth/map.jpg',
-    './venus/map.jpg',
-    './volcanic/color.png'
+    'https://ik.imagekit.io/yashyadav/planets/color2.webp?updatedAt=1733681073624',
+    'https://ik.imagekit.io/yashyadav/planets/earth.webp?updatedAt=1733681401143',
+    'https://ik.imagekit.io/yashyadav/planets/venus_1_optimized.webp?updatedAt=1733680394186',
+    'https://ik.imagekit.io/yashyadav/planets/venusnew_1.webp?updatedAt=1733680892174'
 ]
 
 const starTexture = new THREE.TextureLoader().load('./stars.jpg');

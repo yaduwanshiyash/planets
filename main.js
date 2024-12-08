@@ -26,7 +26,7 @@ const segments = 64;
 const orbitRadius = 3;
 const spheres = new THREE.Group();
 const textures = [
-    './csilla/color.png',
+    'https://ik.imagekit.io/yashyadav/planets/earthmap1k.jpg?updatedAt=1733679161443',
     './earth/map.jpg',
     './venus/map.jpg',
     './volcanic/color.png'

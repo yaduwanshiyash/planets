@@ -26,9 +26,9 @@ const segments = 64;
 const orbitRadius = 3;
 const spheres = new THREE.Group();
 const textures = [
-    'https://ik.imagekit.io/yashyadav/planets/color2.webp?updatedAt=1733681073624',
-    'https://ik.imagekit.io/yashyadav/planets/earth.webp?updatedAt=1733681401143',
-    'https://ik.imagekit.io/yashyadav/planets/venus_1_optimized.webp?updatedAt=1733680394186',
+    'https://asset.cloudinary.com/dfoqpbfa6/55509109d228eea109a8ab8bdfcfa961',
+    'https://asset.cloudinary.com/dfoqpbfa6/2da459456ca7a756ba1b7ebd7aa36edd',
+    'https://asset.cloudinary.com/dfoqpbfa6/b4e344c1b20d725dc76ec87c0414a04a',
     'https://ik.imagekit.io/yashyadav/planets/venusnew_1.webp?updatedAt=1733680892174'
 ]
 

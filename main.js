@@ -38,10 +38,10 @@ const segments = 64;
 const orbitRadius = 3;
 const spheres = new THREE.Group();
 const textures = [
-  "./public/ice.jpg",
-  "./public/jlvqacseq6uo6m1amga6.jpg",
-  "./public/bn28oas0qhpjr4aij8s6.jpg",
-  "./public/avqrz3jwfsekpyntipkn.jpg",
+  "./ice.jpg",
+  "./jlvqacseq6uo6m1amga6.jpg",
+  "./bn28oas0qhpjr4aij8s6.jpg",
+  "./avqrz3jwfsekpyntipkn.jpg",
 ];
 
 const starTexture = textureLoader.load("./stars.jpg");

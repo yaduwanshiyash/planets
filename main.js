@@ -11,10 +11,10 @@ const textureLoader = new THREE.TextureLoader(loadingManager);
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
-  25,
+  window.innerWidth < 768 ? 45 : 25,
   window.innerWidth / window.innerHeight,
   0.1,
-  100
+  window.innerWidth < 768 ? 45 : 100
 );
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector("canvas"),
@@ -38,10 +38,10 @@ const segments = 64;
 const orbitRadius = 3;
 const spheres = new THREE.Group();
 const textures = [
-  "./public/ice.jpg",
-  "./public/jlvqacseq6uo6m1amga6.jpg",
-  "./public/bn28oas0qhpjr4aij8s6.jpg",
-  "./public/avqrz3jwfsekpyntipkn.jpg",
+  "./ice.jpg",
+  "./jlvqacseq6uo6m1amga6.jpg",
+  "./bn28oas0qhpjr4aij8s6.jpg",
+  "./avqrz3jwfsekpyntipkn.jpg",
 ];
 
 const starTexture = textureLoader.load("./stars.jpg");
@@ -106,18 +106,19 @@ function throttleWheelHandler(event) {
   }, 2000);
   lastWheelTime = currentTime;
 
-  const direction = event.deltaY > 0 ? "down" : "up";
+  const direction = window.innerWidth < 768 ? event.deltaY > 0 ? "up" : "down": event.deltaY > 0 ? "down": "up";
   scrollCount = (scrollCount + 1) % 4;
   const heading = document.querySelectorAll(".heading");
 
   const headingY = direction === "down" ? `-=${100}%` : `0`;
-  const spheresRotationY = direction === "down" ? `-=${Math.PI / 2}` : `+=${Math.PI / 2}`;
+  const spheresRotationY = direction === "down" ? `-=${Math.PI / 2}` : `0`;
 
   gsap.to(heading, {
     duration: 1,
     y: headingY,
     ease: "power2.out",
   });
+
 
   gsap.to(spheres.rotation, {
     duration: 1,
@@ -135,6 +136,7 @@ function throttleWheelHandler(event) {
 }
 
 window.addEventListener("wheel", throttleWheelHandler);
+window.addEventListener("touchstart", throttleWheelHandler);
 
 const clock = new THREE.Clock();
 
